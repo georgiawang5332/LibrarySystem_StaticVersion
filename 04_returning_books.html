@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜尋</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+
+    <!-- 圖書系統版型 UI外掛 for css -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/open-iconic-bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/icomoon.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/animate.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/style.css">
+
+    <!-- Developer css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <aside class="probootstrap-aside js-probootstrap-aside">
+        <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none">
+            <span class="oi oi-arrow-left"></span> Close</a>
+        <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">
+
+            <a href="index.html" class="mb-2 d-block probootstrap-logo">圖書館系統</a>
+            <p class="mb-0">Library system
+                <!-- <a href="https://uicookies.com/" target="_blank">uiCookies</a> -->
+            </p>
+        </div>
+        <div class="probootstrap-overflow">
+            <nav class="probootstrap-nav">
+                <ul>
+                    <li class="probootstrap-animate active" data-animate-effect="fadeInLeft">
+                        <a href="01_index.html">首頁</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="02_search.html">查詢</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="03_lend.html">借閱</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="04_returning_books.html">還書</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="05_donate_books.html">捐書</a>
+                    </li>
+                    <!-- <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="06_renew.html">續借</a>
+                    </li> -->
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="00_login.html">退出系統</a>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="probootstrap-aside-footer probootstrap-animate" data-animate-effect="fadeInLeft">
+                <ul class="list-unstyled d-flex probootstrap-aside-social">
+                    <li>
+                        <a href="#" class="p-2">
+                            <span class="icon-twitter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-2">
+                            <span class="icon-instagram"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-2">
+                            <span class="icon-dribbble"></span>
+                        </a>
+                    </li>
+                </ul>
+                <p>&copy; 2018
+                    <a href="https://uicookies.com/" target="_blank">Library system</a>.
+                    <br> All Rights Reserved.</p>
+            </footer>
+        </div>
+    </aside>
+
+
+    <main role="main" class="probootstrap-main js-probootstrap-main container">
+        <div class="probootstrap-bar">
+            <a href="#" class="probootstrap-toggle js-probootstrap-toggle">
+                <span class="oi oi-menu"></span>
+            </a>
+            <div class="probootstrap-main-site-logo">
+                <a href="index.html">圖書系統</a>
+            </div>
+        </div>
+
+        <div class="container-fulid w-100">
+            <div class="row col-12 border border-info">
+                <div class="container">
+                    <div class="pt-2">
+                        <h2 class="borrowaccount col-12 text-center">
+                            還書
+                        </h2>
+                    </div>
+                    <form class="pb-3">
+                        <div class="form-group row has-success">
+                            <label for="inputHorizontalSuccess" class="col-sm-2 col-form-label pt-3 text-center">條碼號: </label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control form-control-success" id="inputHorizontalSuccess" placeholder="範例: A123456789">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label  pt-3 text-center">中文書名: </label>
+                            <div class="col-10">
+                                <input class="form-control" type="text" value="" id="example-text-input1" placeholder="範例: 哈利波特">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label  pt-3 text-center">英文書名: </label>
+                            <div class="col-10">
+                                <input class="form-control" type="text" value="" id="example-text-input2" placeholder="範例: Harry Potter">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label  pt-3 text-center">索書號: </label>
+                            <div class="col-10">
+                                <input class="form-control" type="text" value="" id="example-text-input3" placeholder="範例: 312.32J3 0450">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-text-input" class="col-2 col-form-label  pt-3 text-center">ISBN: </label>
+                            <div class="col-10">
+                                <input class="form-control" type="text" value="" id="example-text-input4" placeholder="範例: 9789867794604">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-2 col-form-label  pt-3 text-center">借閱日期: </label>
+                            <div class="col-10">
+                                <input readonly class="form-control form-control-plaintext" type="text" value="2018-09-23" id="example-text-input5">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="staticEmail" class="col-2 col-form-label  pt-3 text-center">應還日期: </label>
+                            <div class="col-10">
+                                <input readonly class="form-control form-control-plaintext " type="text" value="2018-10-22" id="example-text-input6">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <button type="submit" class="btn btn-primary text-center p-3" onclick="alert('確認資料正確嗎?')">確認送出</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container-fulid w-100 pt-5 pb-5">
+            <div class="row col-12 border border-info">
+                <h2 class="borrowaccount">
+                    目前還書紀錄 : 共 0 /件
+                </h2>
+            </div>
+
+            <div class="row col-12 border border-info p-3">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">條碼號</th>
+                                <th scope="col">類型</th>
+                                <th scope="col">續借次數</th>
+                                <th scope="col">索書號</th>
+                                <th scope="col">提名</th>
+                                <th scope="col">著者</th>
+                                <th scope="col">借閱日期</th>
+                                <th scope="col">應還日期</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <tr>
+                                <th scope="row">1</th>
+                                <td>9823430</td>
+                                <td>書刊</td>
+                                <td>1</td>
+                                <td>312.32J3 0581</td>
+                                <td>JDK 10/8適用</td>
+                                <td>施威銘研究室</td>
+                                <td>2018/08/24</td>
+                                <td>2018/08/23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>9823431</td>
+                                <td>書刊</td>
+                                <td>1</td>
+                                <td>312.32J3 0581</td>
+                                <td>JDK 10/8適用</td>
+                                <td>施威銘研究室</td>
+                                <td>2018/08/24</td>
+                                <td>2018/08/23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>9823432</td>
+                                <td>書刊</td>
+                                <td>1</td>
+                                <td>312.32J3 0581</td>
+                                <td>JDK 10/8適用</td>
+                                <td>施威銘研究室</td>
+                                <td>2018/08/24</td>
+                                <td>2018/08/23</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container-fluid d-md-none">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled d-flex probootstrap-aside-social">
+                        <li>
+                            <a href="#" class="p-2">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="p-2">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="p-2">
+                                <span class="icon-dribbble"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>&copy; 2018
+                        <a href="#" target="_blank">Library system</a>.
+                        <br> All Rights Reserved. Designed by
+                        <a href="#" target="_blank">Library_system.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
+<!-- Optional JavaScript , jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+<!-- 圖書系統版型 UI外掛 for js -->
+<script src="https://uicookies.com/demo/theme/aside/js/jquery-3.2.1.slim.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/popper.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/bootstrap.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/owl.carousel.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/jquery.waypoints.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/imagesloaded.pkgd.min.js"></script>
+
+<script src="https://uicookies.com/demo/theme/aside/js/main.js"></script>
+
+<!-- Developer js -->
+<script src="js/main.js"></script>

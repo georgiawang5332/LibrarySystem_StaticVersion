@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <!-- Developer css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="login h-75 rounded border-success" style="background:#22bd9a;">
+            <!--角落圓圈-->
+            <div class="circle1" style="top:3px;left:3px;"></div>
+            <div class="circle2" style="top:3px;right:3px;"></div>
+            <div class="circle3" style="bottom:3px;left:3px;"></div>
+            <div class="circle4" style="bottom:3px;right:3px;"></div>
+            <!--=====================================================================================-->
+            <div class="text-center position-relative rounded-top" style="height:20%; border-bottom: 1px solid #6bd1ba; background-color:#22bd9a;">
+                <img src="http://erp.16888.hk/Content/Img/login_hd.png" alt="">
+                <!--頭像-->
+                <img src="http://erp.16888.hk/Content/Img/login_img.png" class="w-25 login_img position-absolute" style="top: 8vh; left: 38%;">
+            </div>
+            <form method="POST" id="LogInForm" class="col-12 w-100 pt-4">
+                <div class="form-group">
+                    <label for="Account" class="font-weight-normal">帳號:</label>
+                    <input id="account" type="text" class="form-control col-12" placeholder="account..." required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="font-weight-normal">密碼:</label>
+                    <input type="password" name="password" id="password" class="form-control col-12" placeholder="password..." required>
+                </div>
+                <div class="col-12 row p-3" style="margin-left: 0;">
+                    <button id="LogInbtn" type="button" class="logBtn btn btn-lg col-5 btn-primary ml-3">登入</button>
+                    <button id="LogReset" type="reset" class="border-0 bg-warning logBtn btn btn-lg col-5 btn-primary ml-3" style="margin-left: 16%;" value="重新输入">重新输入</button>
+                </div>
+                <div class="col-12 pb-4 forgetPs">
+                    <a class="col-12 text-right float-right" href="/Account/ForgetPwd">忘记密码？</a>
+                </div>
+            </form>
+
+            <!--IE6下的提示框-->
+            <div class="hShowAlert_ie6 hidden col-12" id="hShowAlert_ie6">
+                <p>您當前瀏覽器版本過低，為了不影響正常使用，請升級至IE7及以上版本:
+                    <a href="http://rj.baidu.com/soft/detail/23253.html?ald" target="_blank">點此處下載</a>
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+<!-- Optional JavaScript , jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+<!-- Developer js -->
+<script src="js/main.js"></script>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜尋</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+
+    <!-- 圖書系統版型 UI外掛 for css -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/open-iconic-bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/icomoon.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/animate.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/style.css">
+
+    <!-- Developer css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <aside class="probootstrap-aside js-probootstrap-aside">
+        <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none">
+            <span class="oi oi-arrow-left"></span> Close</a>
+        <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">
+
+            <a href="index.html" class="mb-2 d-block probootstrap-logo">圖書館系統</a>
+            <p class="mb-0">Library system
+                <!-- <a href="https://uicookies.com/" target="_blank">uiCookies</a> -->
+            </p>
+        </div>
+        <div class="probootstrap-overflow">
+            <nav class="probootstrap-nav">
+                <ul>
+                    <li class="probootstrap-animate active" data-animate-effect="fadeInLeft">
+                        <a href="01_index.html">首頁</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="02_search.html">查詢</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="03_lend.html">借閱</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="04_returning_books.html">還書</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="05_donate_books.html">捐書</a>
+                    </li>
+                    <!-- <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="06_renew.html">續借</a>
+                    </li> -->
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="00_login.html">退出系統</a>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="probootstrap-aside-footer probootstrap-animate" data-animate-effect="fadeInLeft">
+                <ul class="list-unstyled d-flex probootstrap-aside-social">
+                    <li>
+                        <a href="#" class="p-2">
+                            <span class="icon-twitter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-2">
+                            <span class="icon-instagram"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-2">
+                            <span class="icon-dribbble"></span>
+                        </a>
+                    </li>
+                </ul>
+                <p>&copy; 2018
+                    <a href="https://uicookies.com/" target="_blank">Library system</a>.
+                    <br> All Rights Reserved.</p>
+            </footer>
+        </div>
+    </aside>
+
+
+    <main role="main" class="renew probootstrap-main js-probootstrap-main container">
+        <div class="probootstrap-bar">
+            <a href="#" class="probootstrap-toggle js-probootstrap-toggle">
+                <span class="oi oi-menu"></span>
+            </a>
+            <div class="probootstrap-main-site-logo">
+                <a href="index.html">圖書系統</a>
+            </div>
+        </div>
+
+
+        <div class="container-fulid w-100">
+            <div class="row col-12 border border-info">
+                <h2 class="borrowaccount">
+                    目前續借 : 共 6 /件
+                    <button type="submit" class="btn btn-primary text-center p-2">續借功能</button>
+                </h2>
+            </div>
+
+            <div class="row col-12 border border-info p-3">
+                <div class="table-responsive">
+                    <table class="table table-striped" style="background-color: transparent; table-layout: fixed;">
+                        <thead>
+                            <tr>
+                                <th class="col-12" style="width: 100px;">
+                                    <label class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input">
+                                        <span class="custom-control-indicator pl-3"></span>
+                                        <span class="custom-control-description pl-1">全選</span>
+                                    </label>
+                                </th>
+                                <th scope="col">No.</th>
+                                <th scope="col">條碼號</th>
+                                <th scope="col">類型</th>
+                                <th scope="col">續借次數</th>
+                                <th scope="col">索書號</th>
+                                <th scope="col">提名</th>
+                                <th scope="col">著者</th>
+                                <th scope="col">借閱日期</th>
+                                <th scope="col">應還日期</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox1" value="option1" aria-label="...">
+                                        </label>
+                                    </div>
+                                </th>
+                                <td>1</td>
+                                <td>9823430</td>
+                                <td>書刊</td>
+                                <td>1</td>
+                                <td>312.32J3 0581</td>
+                                <td>JDK 10/8適用</td>
+                                <td>施威銘研究室</td>
+                                <td>2018/08/24</td>
+                                <td>2018/08/23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox2" value="option1" aria-label="...">
+                                        </label>
+                                    </div>
+                                </th>
+                                <td>2</td>
+                                <td>9823430</td>
+                                <td>書刊</td>
+                                <td>1</td>
+                                <td>312.32J3 0581</td>
+                                <td>JDK 10/8適用</td>
+                                <td>施威銘研究室</td>
+                                <td>2018/08/24</td>
+                                <td>2018/08/23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox3" value="option1" aria-label="...">
+                                        </label>
+                                    </div>
+                                </th>
+                                <td>3</td>
+                                <td>9823430</td>
+                                <td>書刊</td>
+                                <td>1</td>
+                                <td>312.32J3 0581</td>
+                                <td>JDK 10/8適用</td>
+                                <td>施威銘研究室</td>
+                                <td>2018/08/24</td>
+                                <td>2018/08/23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox4" value="option1" aria-label="...">
+                                        </label>
+                                    </div>
+                                </th>
+                                <td>4</td>
+                                <td>9823430</td>
+                                <td>書刊</td>
+                                <td>1</td>
+                                <td>312.32J3 0581</td>
+                                <td>JDK 10/8適用</td>
+                                <td>施威銘研究室</td>
+                                <td>2018/08/24</td>
+                                <td>2018/08/23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox5" value="option1" aria-label="...">
+                                        </label>
+                                    </div>
+                                </th>
+                                <td>5</td>
+                                <td>9823430</td>
+                                <td>書刊</td>
+                                <td>1</td>
+                                <td>312.32J3 0581</td>
+                                <td>JDK 10/8適用</td>
+                                <td>施威銘研究室</td>
+                                <td>2018/08/24</td>
+                                <td>2018/08/23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" type="checkbox" id="blankCheckbox6" value="option1" aria-label="...">
+                                        </label>
+                                    </div>
+                                </th>
+                                <td>6</td>
+                                <td>9823430</td>
+                                <td>書刊</td>
+                                <td>1</td>
+                                <td>312.32J3 0581</td>
+                                <td>JDK 10/8適用</td>
+                                <td>施威銘研究室</td>
+                                <td>2018/08/24</td>
+                                <td>2018/08/23</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container-fluid d-md-none">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled d-flex probootstrap-aside-social">
+                        <li>
+                            <a href="#" class="p-2">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="p-2">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="p-2">
+                                <span class="icon-dribbble"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>&copy; 2018
+                        <a href="#" target="_blank">Library system</a>.
+                        <br> All Rights Reserved. Designed by
+                        <a href="#" target="_blank">Library_system.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
+<!-- Optional JavaScript , jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+<!-- 圖書系統版型 UI外掛 for js -->
+<script src="https://uicookies.com/demo/theme/aside/js/jquery-3.2.1.slim.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/popper.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/bootstrap.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/owl.carousel.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/jquery.waypoints.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/imagesloaded.pkgd.min.js"></script>
+
+<script src="https://uicookies.com/demo/theme/aside/js/main.js"></script>
+
+<!-- Developer js -->
+<script src="js/main.js"></script>

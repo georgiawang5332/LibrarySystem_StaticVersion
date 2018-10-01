@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜尋</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+
+    <!-- 圖書系統版型 UI外掛 for css -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/open-iconic-bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/icomoon.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/animate.css">
+    <link rel="stylesheet" href="https://uicookies.com/demo/theme/aside/css/style.css">
+
+    <!-- Developer css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <aside class="probootstrap-aside js-probootstrap-aside">
+        <a href="#" class="probootstrap-close-menu js-probootstrap-close-menu d-md-none">
+            <span class="oi oi-arrow-left"></span> Close</a>
+        <div class="probootstrap-site-logo probootstrap-animate" data-animate-effect="fadeInLeft">
+
+            <a href="index.html" class="mb-2 d-block probootstrap-logo">圖書館系統</a>
+            <p class="mb-0">Library system
+                <!-- <a href="https://uicookies.com/" target="_blank">uiCookies</a> -->
+            </p>
+        </div>
+        <div class="probootstrap-overflow">
+            <nav class="probootstrap-nav">
+                <ul>
+                    <li class="probootstrap-animate active" data-animate-effect="fadeInLeft">
+                        <a href="01_index.html">首頁</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="02_search.html">查詢</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="03_lend.html">借閱</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="04_returning_books.html">還書</a>
+                    </li>
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="05_donate_books.html">捐書</a>
+                    </li>
+                    <!-- <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="06_renew.html">續借</a>
+                    </li> -->
+                    <li class="probootstrap-animate" data-animate-effect="fadeInLeft">
+                        <a href="00_login.html">退出系統</a>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="probootstrap-aside-footer probootstrap-animate" data-animate-effect="fadeInLeft">
+                <ul class="list-unstyled d-flex probootstrap-aside-social">
+                    <li>
+                        <a href="#" class="p-2">
+                            <span class="icon-twitter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-2">
+                            <span class="icon-instagram"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="p-2">
+                            <span class="icon-dribbble"></span>
+                        </a>
+                    </li>
+                </ul>
+                <p>&copy; 2018
+                    <a href="https://uicookies.com/" target="_blank">Library system</a>.
+                    <br> All Rights Reserved.</p>
+            </footer>
+        </div>
+    </aside>
+
+
+    <main role="main" class="probootstrap-main js-probootstrap-main container">
+        <div class="probootstrap-bar">
+            <a href="#" class="probootstrap-toggle js-probootstrap-toggle">
+                <span class="oi oi-menu"></span>
+            </a>
+            <div class="probootstrap-main-site-logo">
+                <a href="index.html">圖書系統</a>
+            </div>
+        </div>
+        <div class="container-fulid w-100 p-1">
+            <div class="row col-12 border border-info p-3">
+                <form class="form-inline md-form mr-auto w-100">
+                    <input class="form-control mr-sm-2 col-9" type="text" placeholder="Search" aria-label="Search">
+                    <button class="col-2 btn btn-outline-warning btn-rounded btn-sm my-0" type="submit">Search</button>
+                </form>
+
+                <div id="optionAdv" class="advSearchBtn pt-1 w-100 col-12">
+                    <p class="col-3 float-left pl-0 ml-0">
+                        <label title="每頁顯示">每頁顯示：</label>
+                        <select name="showtuple">
+                            <option selected="selected">10</option>
+                            <option>30</option>
+                            <option>50</option>
+                        </select>&nbsp;筆資料
+                    </p>
+                    <p class="col-4 float-left pl-0 ml-0">
+                        <label title="排序條件">排序條件：</label>
+                        <select onchange="setAdvSort(this.value)">
+                            <option value="RELATED,1">相關度</option>
+                            <option value="MarcInsertDate,1" selected="selected">新增日期由新到舊</option>
+                            <option value="OPN,0">著者-筆劃升冪</option>
+                            <option value="OPN,1">著者-筆劃降冪</option>
+                            <option value="OTI,0">題名-筆劃升冪</option>
+                            <option value="OTI,1">題名-筆劃降冪</option>
+                            <option value="YEAR,0">出版年舊到新</option>
+                            <option value="YEAR,1">出版年新到舊</option>
+                        </select>
+                        <input type="hidden" name="sortfield" value="MarcInsertDate" />
+                        <input type="hidden" name="sorttype" value="1" />
+                    </p>
+                    <p class="col-5 pl-0 ml-0 float-left">輸入的查詢詞 : java(題名) ， 共 2 /件</p>
+                </div>
+            </div>
+
+
+            <div class="row col-12 border border-info p-3">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="" style="font-size:16px;" scope="col">No.</th>
+                                <th class="w-100 col-12" scope="col" style="color:transparent;">-------------------------------------------------------------------------------------------------------</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td valign="top">
+                                    <h6>
+                                        <a href="bookDetail.do?id=766190&amp;resid=188940319&amp;nowid=1&amp;Lflag=1" target="_parent">哈利波特 : JDK 10/8適用 / Programming language / 施威銘研究室作 施威銘研究室</a>
+                                        <br>
+                                    </h6>
+                                    <ul>
+                                        <li>著者：施威銘研究室</li>
+                                        <li>出版者：旗標科技</li>
+                                        <li>出版年：2018</li>
+                                        <li>出版項：第五版</li>
+                                        <li>索書號 ：312.32J3 0581</li>
+                                    </ul>
+                                    <div class="btnalign">
+                                        <div class="usebtn float-left">
+                                            <a href="bookDetail.do?id=766190&amp;resid=188940319&amp;nowid=1&amp;Lflag=1" target="_parent">詳細內容&nbsp;</a>
+                                        </div>
+                                        <div id="reserveBtn766190" class="usebtn float-left">
+                                            <a href="javascript:;" class="IntegratreserveBtn" rel="NonLogin" marcid="766190">&nbsp;預約&nbsp;</a>
+                                        </div>
+                                        <!-- <div id="" class="usebtn float-left">
+                                            <a href="javascript:;" class="IntegratreserveBtn" rel="NonLogin" marcid="766190">&nbsp;借閱&nbsp;</a>
+                                        </div> -->
+                                        <span id="account766190" class="float-left">&nbsp;點閱次數:
+                                            <em>&nbsp;500&nbsp;</em>次 預約等待人數:
+                                            <em>&nbsp;0</em>&nbsp;人
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td valign="top">
+                                    <h6>
+                                        <a href="bookDetail.do?id=766190&amp;resid=188940319&amp;nowid=1&amp;Lflag=1" target="_parent">現代Java : 輕鬆解決Java 8與9的難題 / Ken Kousen著 ; 賴屹民譯 考森 (Kousen, Ken)</a>
+                                        <br>
+                                    </h6>
+                                    <ul>
+                                        <li>著者：施威銘研究室</li>
+                                        <li>出版者：旗標科技</li>
+                                        <li>出版年：2018</li>
+                                        <li>出版項：第五版</li>
+                                        <li>索書號 ：312.32J3 0581</li>
+                                    </ul>
+                                    <div class="btnalign">
+                                        <div class="usebtn float-left">
+                                            <a href="bookDetail.do?id=766190&amp;resid=188940319&amp;nowid=1&amp;Lflag=1" target="_parent">詳細內容&nbsp;</a>
+                                        </div>
+                                        <div id="" class="usebtn float-left">
+                                            <a href="javascript:;" class="IntegratreserveBtn" rel="NonLogin" marcid="766190">&nbsp;預約&nbsp;</a>
+                                        </div>
+                                        <span id="" class="float-left">&nbsp;點閱次數:
+                                            <em>&nbsp;0&nbsp;</em>次 預約等待人數:
+                                            <em>&nbsp;5</em>&nbsp;人
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!--<tr>
+                                <th scope="row">2</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr> -->
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+        <div class="container-fluid d-md-none">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="list-unstyled d-flex probootstrap-aside-social">
+                        <li>
+                            <a href="#" class="p-2">
+                                <span class="icon-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="p-2">
+                                <span class="icon-instagram"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="p-2">
+                                <span class="icon-dribbble"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>&copy; 2018
+                        <a href="#" target="_blank">Library system</a>.
+                        <br> All Rights Reserved. Designed by
+                        <a href="#" target="_blank">Library_system.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
+<!-- Optional JavaScript , jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+
+<!-- 圖書系統版型 UI外掛 for js -->
+<script src="https://uicookies.com/demo/theme/aside/js/jquery-3.2.1.slim.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/popper.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/bootstrap.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/owl.carousel.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/jquery.waypoints.min.js"></script>
+<script src="https://uicookies.com/demo/theme/aside/js/imagesloaded.pkgd.min.js"></script>
+
+<script src="https://uicookies.com/demo/theme/aside/js/main.js"></script>
+
+<!-- Developer js -->
+<script src="js/main.js"></script>
